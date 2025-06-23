@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Smart Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Sherif">
+    <meta name="keywords" content="">
+    <!-- favicon ico -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome style -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="d-flex justify-content-center align-items-center">
+        <section class="p-5 text-center">
+            <div class="container">
+                <h1 class="mb-3">Smart Login System</h1>
+                <form id="formsignin" action="./home.html" method="get" class="row g-3">
+                    <div class="px-0 position-relative mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Enter your Email"
+                            autocomplete="email" minlength="4" maxlength="40" required>
+                    </div>
+                    <div class="px-0 position-relative mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="Enter your Password"
+                            minlength="8" required>
+                        <i
+                            class="fa-solid fa-eye position-absolute translate-middle-y top-50 text-white password-toggle"></i>
+                    </div>
+                    <div class="px-0 position-relative mb-3">
+                        <button class="btn btn-outline-info btn-custom w-100">Login</button>
+                        <div class="invalid-tooltip invalid-account"></div>
+                    </div>
+                </form>
+                <p class="text-white mt-3">Don’t have an account? <a class="text-white" href="./signup.html">Sign Up</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- bootstrap script -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- main script -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/* ************************ start general css  *************************/
+:root {
+    --main-color: #17a2b8;
+    --bg-color: #24353f;
+    --border-color: #80bdff;
+    --default-color: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+    color: var(--main-color);
+}
+
+main {
+    height: 100dvh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ************************ end general css  *************************/
+
+/* ************************ start navbar  *************************/
+.navbar {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+/* ************************ end navbar  *************************/
+
+/* ************************ start form  *************************/
+
+section {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    max-width: 500px;
+}
+
+.form-control {
+    --bs-body-color: var(--default-color);
+    --bs-body-bg: transparent;
+
+    &::placeholder {
+        color: var(--default-color);
+        opacity: .7;
+    }
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.form-control:-webkit-autofill {
+    background-color: transparent;
+    -webkit-text-fill-color: var(--default-color);
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    -moz-transition: background-color 5000s ease-in-out 0s;
+    -ms-transition: background-color 5000s ease-in-out 0s;
+    -o-transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn-custom {
+    --bs-btn-color: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: var(--default-color);
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+    --bs-btn-active-color: var(--main-color);
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-active-border-color: var(--main-color);
+    --bs-btn-disabled-color: var(--main-color);
+    --bs-btn-disabled-border-color: var(--main-color);
+}
+
+.password-toggle {
+    right: 10px;
+    cursor: pointer;
+}
+
+p a:hover {
+    color: var(--main-color) !important;
+    text-decoration: underline;
+}
+
+/* ************************ end form  *************************/
