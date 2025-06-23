@@ -109,7 +109,7 @@ function addUser() {
             }
             userAccounts.push(user);
             localStorage.setItem('user', JSON.stringify(userAccounts));
-            window.location.href = "/";
+            window.location.href = "/index.html";
         } else {
             invalidAccountMsg.classList.add('d-block');
             invalidAccountMsg.innerHTML = 'this email is already exists'
@@ -126,7 +126,7 @@ function getUser() {
 
 // emailInput && passwordInput && passwordToggle for signIn && signUp pages only
 if (emailInput && passwordInput && passwordToggle) {
-    // check emailInput && passwordInput in signUp pages only
+    // check emailInput && passwordInput in signUp page only
     if (window.location.href.includes('signup')) {
         emailInput.addEventListener('input', function (e) {
             validEmail(e.target.value);
@@ -181,6 +181,6 @@ if (formSignIn) {
 if (logoutBtn) {
     logoutBtn.addEventListener('click', function () {
         localStorage.removeItem('username');
-        window.location.href = '/';
+        window.location.href = '/index.html';
     })
 }
