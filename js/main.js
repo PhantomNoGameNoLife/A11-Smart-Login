@@ -10,6 +10,7 @@ var validEmailMsg = document.querySelector('.valid-email')
 var validPasswordMsg = document.querySelector('.valid-password')
 var welcomeMsg = document.querySelector('#welcomemsg')
 var logoutBtn = document.querySelector('#logout')
+var toast = document.querySelector('.toast')
 var userAccounts = [];
 // get BaseURl and path without .html
 var BaseURl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
@@ -29,8 +30,13 @@ if (window.location.href.includes('/home')) {
     if (localStorage.getItem('username')) {
         welcomeMsg.innerHTML = `Welcome ${localStorage.getItem('username')}`;
     } else {
-        window.location.href = `${BaseURl}`;
+        window.location.href = `${BaseURl}?userAccess`;
     }
+}
+
+// if added new user from signUp page or user haven't sign in before go to home page -> show toast
+if (window.location.href.includes('?userAccess')) {
+    toast.classList.add('show')
 }
 
 // check valid name if value is true show success message ,else show error message
@@ -115,7 +121,7 @@ function addUser() {
             }
             userAccounts.push(user);
             localStorage.setItem('user', JSON.stringify(userAccounts));
-            window.location.href = `${BaseURl}`;
+            window.location.href = `${BaseURl}?userAccess`;
         } else {
             invalidAccountMsg.classList.add('d-block');
             invalidAccountMsg.innerHTML = 'this email is already exists'

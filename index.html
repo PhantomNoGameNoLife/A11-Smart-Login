@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <main class="d-flex justify-content-center align-items-center">
+    <main class="d-flex justify-content-center align-items-center position-relative">
         <section class="p-5 text-center">
             <div class="container">
                 <h1 class="mb-3">Smart Login System</h1>
@@ -48,6 +48,14 @@
                 </p>
             </div>
         </section>
+        <div class="toast position-absolute top-0 start-50 translate-middle-x" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="./favicon.ico" class="rounded me-2" alt="ico">
+                <strong class="me-auto">Smart Login</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">Please sign in to access the home page</div>
+        </div>
     </main>
     <!-- bootstrap script -->
     <script src="./js/bootstrap.bundle.min.js"></script>
