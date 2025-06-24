@@ -11,6 +11,8 @@ var validPasswordMsg = document.querySelector('.valid-password')
 var welcomeMsg = document.querySelector('#welcomemsg')
 var logoutBtn = document.querySelector('#logout')
 var userAccounts = [];
+// get BaseURl and path without .html
+var BaseURl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
 
 // get users from localStorage
 if (localStorage.getItem('user')) {
@@ -18,13 +20,17 @@ if (localStorage.getItem('user')) {
 }
 
 // check user if signin before
-if (localStorage.getItem('username') && !window.location.href.includes('home')) {
-    window.location.href = "/home.html";
+if (localStorage.getItem('username') && !window.location.href.includes('/home')) {
+    window.location.href = `${BaseURl}home.html`;
 }
 
 //if user in home page welcome him
-if (localStorage.getItem('username') && window.location.href.includes('home')) {
-    welcomeMsg.innerHTML = `Welcome ${localStorage.getItem('username')}`
+if (window.location.href.includes('/home')) {
+    if (localStorage.getItem('username')) {
+        welcomeMsg.innerHTML = `Welcome ${localStorage.getItem('username')}`;
+    } else {
+        window.location.href = `${BaseURl}`;
+    }
 }
 
 // check valid name if value is true show success message ,else show error message
@@ -109,7 +115,7 @@ function addUser() {
             }
             userAccounts.push(user);
             localStorage.setItem('user', JSON.stringify(userAccounts));
-            window.location.href = "/index.html";
+            window.location.href = `${BaseURl}`;
         } else {
             invalidAccountMsg.classList.add('d-block');
             invalidAccountMsg.innerHTML = 'this email is already exists'
@@ -127,7 +133,7 @@ function getUser() {
 // emailInput && passwordInput && passwordToggle for signIn && signUp pages only
 if (emailInput && passwordInput && passwordToggle) {
     // check emailInput && passwordInput in signUp page only
-    if (window.location.href.includes('signup')) {
+    if (window.location.href.includes('/signup')) {
         emailInput.addEventListener('input', function (e) {
             validEmail(e.target.value);
         })
@@ -168,7 +174,7 @@ if (formSignIn) {
         var user = getUser();
         if (user && user.email === emailInput.value && user.password === passwordInput.value) {
             localStorage.setItem('username', user.name);
-            window.location.href = "/home.html";
+            window.location.href = `${BaseURl}home.html`;
         } else {
             invalidAccountMsg.classList.add('d-block');
             // must (Incorrect email or password) for Security 
@@ -181,6 +187,6 @@ if (formSignIn) {
 if (logoutBtn) {
     logoutBtn.addEventListener('click', function () {
         localStorage.removeItem('username');
-        window.location.href = '/index.html';
+        window.location.href = `${BaseURl}`;
     })
 }
