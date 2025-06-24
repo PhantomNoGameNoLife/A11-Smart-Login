@@ -2,8 +2,8 @@
 :root {
     --main-color: #17a2b8;
     --bg-color: #24353f;
-    --border-color: #80bdff;
     --default-color: #fff;
+    --dark-color: #000;
 }
 
 body {
@@ -27,7 +27,7 @@ a {
 
 /* ************************ start navbar  *************************/
 .navbar {
-    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    box-shadow: -5px 2px 54px -9px var(--dark-color);
 }
 
 /* ************************ end navbar  *************************/
@@ -35,7 +35,7 @@ a {
 /* ************************ start form  *************************/
 
 section {
-    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    box-shadow: -5px 2px 54px -9px var(--dark-color);
     max-width: 500px;
 }
 
