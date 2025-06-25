@@ -82,7 +82,7 @@ section {
     cursor: pointer;
 }
 
-p a:hover {
+main a:hover {
     color: var(--main-color) !important;
     text-decoration: underline;
 }

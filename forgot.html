@@ -28,38 +28,19 @@
         <section class="p-5 text-center">
             <div class="container">
                 <h1 class="mb-3">Smart Login System</h1>
-                <form id="formsignin" class="row g-3">
+                <form id="formforgot" class="row g-3">
                     <div class="px-0 position-relative mb-3">
                         <input type="email" class="form-control" id="email" placeholder="Enter your Email"
                             autocomplete="email" minlength="4" maxlength="40" required>
                         <div class="valid-tooltip valid-email"></div>
                     </div>
                     <div class="px-0 position-relative mb-3">
-                        <input type="password" class="form-control" id="password" placeholder="Enter your Password"
-                            minlength="8" required>
-                        <i
-                            class="fa-solid fa-eye position-absolute translate-middle-y top-50 text-white password-toggle"></i>
-                        <div class="valid-tooltip valid-password"></div>
-                    </div>
-                    <div class="px-0 position-relative mb-3">
-                        <button class="btn btn-outline-info btn-custom w-100">Login</button>
+                        <button class="btn btn-outline-info btn-custom w-100">Reset Password</button>
                         <div class="invalid-tooltip invalid-account"></div>
                     </div>
                 </form>
-                <a class="text-white text-end d-block" href="./forgot.html">forgot your password?</a>
-                <p class="text-white mt-3">Don’t have an account? <a class="text-white" href="./signup.html">Sign Up</a>
-                </p>
             </div>
         </section>
-        <div class="toast position-absolute top-0 start-50 translate-middle-x" role="alert" aria-live="assertive"
-            aria-atomic="true">
-            <div class="toast-header">
-                <img src="./favicon.ico" class="rounded me-2" alt="ico">
-                <strong class="me-auto">Smart Login</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">Please sign in to access the home page</div>
-        </div>
     </main>
     <!-- bootstrap script -->
     <script src="./js/bootstrap.bundle.min.js"></script>
